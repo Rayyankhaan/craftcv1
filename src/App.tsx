@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import { SpeedInsights } from '@vercel/speed-insights/react';
 import { apiRequest, ApiError } from './lib/api';
 import {
   createEmptyResumeContent,
@@ -450,6 +451,7 @@ export default function App() {
           </div>
         )}
       </PopupModal>
+      <SpeedInsights />
     </>
   );
 }

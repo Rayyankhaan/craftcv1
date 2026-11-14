@@ -17,6 +17,7 @@
     "@tailwindcss/vite": "^4.3.3",
     "@types/cookie-parser": "^1.4.10",
     "@types/multer": "^2.3.0",
+    "@vercel/speed-insights": "^2.1.0",
     "@vitejs/plugin-react": "^6.1.1",
     "cookie-parser": "^1.4.7",
     "docx": "^9.15.4",
