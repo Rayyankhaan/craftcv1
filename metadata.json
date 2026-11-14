@@ -1,0 +1,6 @@
+{
+  "name": "CraftCV — AI Resume Builder & Career Platform",
+  "description": "Create ATS-friendly resumes, fresher CVs, tailored job matches, and cover letters with AI. Build your first resume free and export to PDF and DOCX.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

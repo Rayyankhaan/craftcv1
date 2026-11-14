@@ -1,0 +1,1398 @@
+# MASTER PROMPT: BUILD A COMPLETE AI RESUME BUILDER & CAREER PLATFORM
+
+## ROLE
+
+Act as an elite SaaS product architect, senior full-stack developer, UI/UX designer, AI engineer, database architect, security engineer and DevOps engineer.
+
+Your task is to design and build a complete, production-quality AI Resume Builder and Career Development SaaS platform.
+
+The product should combine the strongest ideas from:
+
+1. Teal — AI resume writing, ATS analysis and job matching.
+2. Resume.io — professional resume templates and live editing.
+3. Resume.com — accessible resume creation and downloads.
+
+Reference websites:
+- https://www.tealhq.com/
+- https://resume.io/
+- https://www.resume.com/
+
+Study their functionality and user experience. Create an original, better-designed product. Do not copy their branding, proprietary designs, templates or source code.
+
+IMPORTANT: Build an actual working application, not just a landing page, static UI, prototype or frontend demonstration.
+
+---
+
+# 1. PRODUCT VISION
+
+Build an AI-powered platform where users can:
+
+- Create professional resumes.
+- Build their first fresher resume.
+- Upload existing resumes.
+- Improve resumes using AI.
+- Check ATS compatibility.
+- Match resumes with job descriptions.
+- Generate professional cover letters.
+- Create multiple resume versions.
+- Customize resume templates.
+- Download PDF and DOCX files.
+- Prepare for interviews.
+- Manage job applications.
+
+The platform must use a Freemium + Premium business model.
+
+Primary audience:
+
+- College students.
+- Freshers.
+- Recent graduates.
+- Experienced professionals.
+- Internship applicants.
+- Job seekers.
+- Career switchers.
+- Working professionals.
+
+Primary market: India, with support for international users.
+
+Brand name: Use a configurable placeholder until a final brand name is selected.
+
+---
+
+# 2. TECHNOLOGY STACK
+
+Use the following technology:
+
+FRONTEND:
+- Next.js with App Router.
+- TypeScript.
+- Tailwind CSS.
+- shadcn/ui.
+- Lucide icons.
+- React Hook Form.
+- Zod.
+- Responsive React components.
+
+BACKEND:
+- Supabase.
+- Supabase Authentication.
+- Supabase PostgreSQL.
+- Supabase Storage.
+- Supabase Edge Functions where appropriate.
+- Secure Next.js server-side API routes.
+
+AI:
+- Google Gemini API as the initial AI provider.
+- Create a configurable AI service layer.
+- Support future AI provider integration.
+- Structured JSON output.
+- Server-side API requests.
+- Rate limiting and usage tracking.
+
+DOCUMENT PROCESSING:
+- PDF.js or an appropriate PDF extraction library.
+- DOCX parsing library.
+- Reliable PDF rendering.
+- DOCX generation library.
+- HTML/CSS-based resume rendering.
+
+PAYMENTS:
+- Razorpay.
+- Secure server-side order creation.
+- Payment verification.
+- Signed webhook verification.
+
+DEPLOYMENT:
+- Vercel for frontend and server-side application.
+- Supabase hosted backend.
+
+Do not hardcode credentials.
+
+Create a complete .env.example file.
+
+---
+
+# 3. UI/UX DESIGN SYSTEM
+
+Design a premium-quality SaaS application.
+
+Visual direction:
+
+- Minimalist.
+- Modern.
+- Professional.
+- Elegant.
+- Clean white and neutral backgrounds.
+- Subtle purple/blue accents.
+- Excellent typography.
+- Carefully designed spacing.
+- Rounded cards.
+- Subtle shadows.
+- Smooth transitions.
+- Professional icons.
+- Clear visual hierarchy.
+
+Avoid:
+- Excessive gradients.
+- Unnecessary animations.
+- Oversized text everywhere.
+- Cluttered dashboards.
+- Generic AI-generated website layouts.
+- Inconsistent spacing.
+- Unnecessary popups.
+
+Use a consistent design system throughout the application.
+
+Support:
+- Desktop.
+- Laptop.
+- Tablet.
+- Mobile.
+- Android browsers.
+- iOS browsers.
+
+Use accessible components and keyboard navigation.
+
+---
+
+# 4. LANDING PAGE
+
+Create a professional landing page with:
+
+1. Responsive navigation.
+2. Hero section.
+3. Resume creation options.
+4. Resume template showcase.
+5. AI resume writing features.
+6. ATS checker introduction.
+7. Fresher resume builder.
+8. Job description matcher.
+9. Cover letter generator.
+10. How it works.
+11. Free vs Premium comparison.
+12. Testimonials section using genuine testimonials only.
+13. Frequently asked questions.
+14. Footer.
+
+Hero headline:
+
+"Build a Resume That Gets You Noticed."
+
+Supporting description:
+
+"Create professional, ATS-friendly resumes with AI. Improve your content, customize your design and download your resume in minutes."
+
+Primary CTA:
+Create My Resume.
+
+Secondary CTA:
+Check My ATS Score.
+
+Additional CTA:
+Build My First Fresher Resume.
+
+Display the Free plan clearly.
+
+Do not force users to register before they can explore the landing page and templates.
+
+---
+
+# 5. COMPLETE AUTHENTICATION SYSTEM
+
+Use Supabase Authentication.
+
+Implement:
+
+A. Google sign-in:
+- Continue with Google.
+- OAuth callback.
+- Automatic profile creation.
+- Persistent sessions.
+
+B. Email authentication:
+- Email and password registration.
+- Full name.
+- Email verification.
+- Login.
+- Forgot password.
+- Reset password.
+- Logout.
+
+C. Mobile authentication:
+- Country code selector.
+- Phone number.
+- SMS OTP.
+- Six-digit OTP verification.
+- Resend OTP.
+- OTP expiration.
+- Invalid OTP handling.
+- Rate limits.
+
+Allow secure account linking between verified email and phone identities.
+
+Use an appropriate SMS provider configured with Supabase.
+
+IMPORTANT:
+SMS delivery is not automatically free. Configure a provider and clearly account for SMS costs.
+
+Create protected routes.
+
+Users must only access their own information.
+
+---
+
+# 6. USER ONBOARDING
+
+After registration, display a simple onboarding flow.
+
+Ask:
+
+- Full name.
+- Career stage.
+- Current education.
+- Target job role.
+- Experience level.
+- Main career goal.
+
+Career stages:
+
+- Student.
+- Fresher.
+- Experienced professional.
+- Career switcher.
+- Internship seeker.
+
+Based on the answers, recommend relevant features.
+
+Allow users to skip optional questions.
+
+---
+
+# 7. USER DASHBOARD
+
+Build a complete dashboard.
+
+Include:
+
+- Welcome message.
+- User profile.
+- Subscription status.
+- Free usage indicator.
+- Resume collection.
+- Create new resume.
+- Create fresher resume.
+- Upload resume.
+- Recent resumes.
+- ATS analysis history.
+- Job matches.
+- Cover letters.
+- Job application tracker.
+- Career tools.
+- Upgrade to Premium.
+- Settings.
+
+Resume cards should display:
+
+- Resume title.
+- Target role.
+- Selected template.
+- Last modified date.
+- Preview.
+- Edit.
+- Duplicate.
+- Download.
+- Delete.
+
+Add search, sorting and filtering.
+
+Implement autosave and manual save.
+
+---
+
+# 8. THREE RESUME CREATION METHODS
+
+METHOD A: BUILD FROM SCRATCH
+
+Guide users through a step-by-step resume creation process.
+
+METHOD B: UPLOAD EXISTING RESUME
+
+Accept PDF and DOCX.
+
+Extract:
+
+- Contact information.
+- Summary.
+- Education.
+- Experience.
+- Skills.
+- Projects.
+- Certifications.
+- Achievements.
+- Languages.
+- Additional sections.
+
+Show extracted information for review.
+
+Do not silently invent missing details.
+
+METHOD C: AI-ASSISTED CREATION
+
+Collect information through a guided questionnaire and generate a first draft.
+
+All generated information must be editable.
+
+---
+
+# 9. ADVANCED RESUME EDITOR
+
+This is the most important module.
+
+Build a professional split-screen editor.
+
+LEFT SIDE:
+- Section navigation.
+- Editable fields.
+- Add/remove sections.
+- AI writing assistant.
+- Section ordering.
+
+RIGHT SIDE:
+- Real-time resume preview.
+- Page navigation.
+- Zoom controls.
+- Page count.
+- Template preview.
+
+Editable sections:
+
+1. Personal information.
+2. Professional summary.
+3. Career objective.
+4. Work experience.
+5. Education.
+6. Technical skills.
+7. Soft skills.
+8. Projects.
+9. Internships.
+10. Certifications.
+11. Achievements.
+12. Awards.
+13. Languages.
+14. Publications.
+15. Volunteer experience.
+16. Custom sections.
+
+Editor functionality:
+
+- Add multiple experiences.
+- Add multiple qualifications.
+- Add unlimited projects.
+- Add certifications.
+- Reorder sections.
+- Edit headings.
+- Customize typography.
+- Change font sizes.
+- Change colors.
+- Adjust margins.
+- Adjust line spacing.
+- Adjust section spacing.
+- Change bullet styles.
+- Change date formats.
+- Hide optional sections.
+- Undo/redo.
+- Autosave.
+- Manual save.
+- Duplicate resume.
+- Switch templates.
+
+Ensure the preview accurately represents the exported document.
+
+Prevent overlapping text, clipped content, broken page breaks and inconsistent spacing.
+
+---
+
+# 10. RESUME TEMPLATE LIBRARY
+
+Create at least 20 original professional templates.
+
+Categories:
+
+- ATS-friendly.
+- Modern.
+- Minimalist.
+- Corporate.
+- Executive.
+- Student.
+- Fresher.
+- Internship.
+- Software engineering.
+- AI and machine learning.
+- Data science.
+- Business.
+- Finance.
+- Marketing.
+- Customer service.
+- Creative.
+- Academic.
+
+Requirements:
+
+- Different actual layouts, not merely different colors.
+- Single-column ATS templates.
+- Carefully tested multi-column templates.
+- Professional typography.
+- Customizable colors.
+- Customizable spacing.
+- Live preview.
+- A4 page size.
+- One-page and multi-page support.
+
+Premium templates must be marked clearly.
+
+Do not lock basic resume creation or downloads behind a subscription.
+
+---
+
+# 11. AI RESUME WRITER
+
+Build an AI-powered writing assistant.
+
+Functions:
+
+- Professional summary generation.
+- Career objective generation.
+- Experience bullet generation.
+- Project description generation.
+- Achievement rewriting.
+- Skills recommendations.
+- Grammar correction.
+- Professional tone improvement.
+- Sentence rewriting.
+- Conciseness improvement.
+- Action verb suggestions.
+- Keyword recommendations.
+
+Provide actions:
+
+- Generate.
+- Regenerate.
+- Improve.
+- Rewrite.
+- Shorten.
+- Expand.
+- Accept.
+- Reject.
+
+IMPORTANT:
+Never fabricate employment history, projects, certifications, achievements, numerical results or skills.
+
+Ask users for missing information.
+
+---
+
+# 12. DEDICATED AI FRESHER RESUME BUILDER
+
+Build a separate Fresher Resume Builder.
+
+Target:
+
+- College students.
+- Final-year students.
+- Recent graduates.
+- Diploma students.
+- Internship seekers.
+- Entry-level job applicants.
+
+Add a prominent homepage option:
+
+"Build My First Resume."
+
+FRESHER ONBOARDING:
+
+Collect:
+
+1. Full name.
+2. Email.
+3. Phone.
+4. Location.
+5. College/university.
+6. Degree.
+7. Specialization.
+8. Graduation year.
+9. Academic year.
+10. CGPA or percentage (optional).
+11. Technical skills.
+12. Soft skills.
+13. Academic projects.
+14. Personal projects.
+15. Internships.
+16. Certifications.
+17. Workshops.
+18. Achievements.
+19. Extracurricular activities.
+20. Target job role.
+
+Allow skipping optional fields.
+
+FRESHER RESUME SECTIONS:
+
+- Professional summary.
+- Career objective.
+- Education.
+- Technical skills.
+- Soft skills.
+- Academic projects.
+- Personal projects.
+- Internships.
+- Certifications.
+- Achievements.
+- Relevant coursework.
+- Positions of responsibility.
+- Extracurricular activities.
+
+Do not force employment experience.
+
+PROJECT DESCRIPTION GENERATOR:
+
+Collect:
+- Project title.
+- Domain.
+- Technologies.
+- Problem solved.
+- Main features.
+- User contribution.
+- Actual outcomes.
+
+Generate:
+- Project description.
+- Three to four resume bullet points.
+- Technologies section.
+- Relevant keywords.
+
+FRESHER CAREER TEMPLATES:
+
+Create templates for:
+
+- Computer Science.
+- AI and Machine Learning.
+- Data Science.
+- Software Development.
+- Web Development.
+- Electronics.
+- Mechanical.
+- Civil.
+- B.Com.
+- BBA.
+- B.Sc.
+- Business.
+- Customer Support.
+- Digital Marketing.
+- General entry-level roles.
+
+FRESHER ATS ANALYSIS:
+
+Evaluate:
+- Education.
+- Skills.
+- Projects.
+- Internships.
+- Certifications.
+- Target role keywords.
+- Grammar.
+- Structure.
+- Formatting.
+
+Do not penalize freshers for not having professional work experience.
+
+FRESHER JOB OPTIMIZATION:
+
+Recommend relevant skills and projects based on the selected job role.
+
+Clearly distinguish existing skills from recommended learning areas.
+
+FRESHER PRICING:
+
+Free:
+- One fresher resume.
+- Basic templates.
+- One basic AI generation.
+- One basic ATS check.
+- Unlimited editing of the original.
+- PDF and DOCX download.
+
+Premium:
+- Multiple fresher resumes.
+- Premium templates.
+- Advanced project descriptions.
+- Advanced ATS.
+- Job-specific customization.
+- Advanced AI tools.
+
+Integrate this module with the same authentication, database, resume editor, AI services and subscription system.
+
+---
+
+# 13. ADVANCED ATS RESUME ANALYZER
+
+Create a dedicated ATS checker.
+
+Inputs:
+- Uploaded resume.
+- Existing saved resume.
+- Target job description (optional).
+
+Evaluate:
+
+- Resume structure.
+- Contact information.
+- Section organization.
+- Professional summary.
+- Work experience.
+- Achievement quality.
+- Action verbs.
+- Skills.
+- Keywords.
+- Grammar.
+- Spelling.
+- Formatting.
+- Readability.
+- Date consistency.
+- ATS parsing risks.
+- Resume length.
+
+Display:
+
+- Overall score out of 100.
+- Category scores.
+- Strengths.
+- Weaknesses.
+- Missing information.
+- Recommended improvements.
+- Actionable suggestions.
+
+Use transparent scoring logic.
+
+Clearly distinguish a general resume quality score from an employer-specific match score.
+
+Never guarantee that a resume will pass every ATS.
+
+Provide a before-and-after comparison.
+
+---
+
+# 14. JOB DESCRIPTION MATCHER
+
+Allow users to paste a job description.
+
+Extract:
+
+- Job title.
+- Required qualifications.
+- Preferred qualifications.
+- Technical skills.
+- Soft skills.
+- Important keywords.
+- Responsibilities.
+- Experience requirements.
+- Education requirements.
+
+Compare against the user's resume.
+
+Show:
+
+- Match score.
+- Matching keywords.
+- Missing keywords.
+- Relevant experience.
+- Skill gaps.
+- Recommendations.
+
+Offer one-click AI-assisted resume tailoring.
+
+Save the tailored resume as a separate version.
+
+Never add skills or experience the user does not possess.
+
+---
+
+# 15. COVER LETTER GENERATOR
+
+Create an integrated AI cover letter builder.
+
+Inputs:
+
+- Existing resume.
+- Target job title.
+- Company name.
+- Job description.
+- Hiring manager (optional).
+- Preferred tone.
+
+Generate professional cover letters.
+
+Allow:
+
+- Edit.
+- Regenerate.
+- Save.
+- Duplicate.
+- PDF export.
+- DOCX export.
+
+---
+
+# 16. ADDITIONAL CAREER TOOLS
+
+Build:
+
+1. LinkedIn About generator.
+2. LinkedIn headline generator.
+3. LinkedIn experience optimizer.
+4. Career objective generator.
+5. Interview question generator.
+6. HR interview preparation.
+7. Technical interview preparation.
+8. STAR answer generator.
+9. Mock interview practice.
+10. Job application tracker.
+11. Skills gap analyzer.
+12. Professional email generator.
+
+JOB APPLICATION TRACKER:
+
+Fields:
+
+- Company.
+- Position.
+- Job URL.
+- Application date.
+- Status.
+- Notes.
+- Resume version.
+- Interview date.
+
+Statuses:
+
+- Interested.
+- Applied.
+- Assessment.
+- Interview.
+- Offer.
+- Rejected.
+
+---
+
+# 17. RESUME VERSION HISTORY
+
+Implement a version management system.
+
+Features:
+
+- Automatically save important versions.
+- Restore earlier versions.
+- Compare versions.
+- Rename versions.
+- Duplicate versions.
+- Track modifications.
+- Preserve the original resume.
+
+Never overwrite the user's master resume during job-specific customization.
+
+---
+
+# 18. PDF, DOCX AND TXT EXPORT
+
+Allow free and premium users to download supported formats according to their plan.
+
+Formats:
+
+- PDF.
+- DOCX.
+- TXT.
+
+Requirements:
+
+- A4 support.
+- Professional typography.
+- Proper margins.
+- Correct spacing.
+- Clickable hyperlinks.
+- Selectable PDF text.
+- Consistent page breaks.
+- Correct multi-page rendering.
+- No watermarks.
+
+Never export a screenshot of the resume.
+
+Use actual document rendering.
+
+Test that the exported document closely matches the editor preview.
+
+---
+
+# 19. FREEMIUM AND PREMIUM BUSINESS MODEL
+
+Implement a secure Freemium + Premium subscription system.
+
+FREE PLAN — ₹0
+
+Each eligible new account receives:
+
+- One free resume.
+- One free fresher resume entitlement within the same account-level resume allowance.
+- Basic templates.
+- Unlimited editing of the original free resume.
+- One basic AI resume generation.
+- One basic ATS analysis.
+- PDF downloads.
+- DOCX downloads.
+- Dashboard access.
+- Resume storage.
+
+Clarify that the user gets one total resume, whether they choose the regular builder or fresher builder. They must not receive a separate free entitlement from each builder.
+
+PREMIUM PLAN — ₹99
+
+Premium includes:
+
+- Unlimited resume creation.
+- Premium templates.
+- Advanced AI resume generation.
+- Expanded AI rewriting.
+- Advanced ATS analysis.
+- Job description matching.
+- Cover letter generation.
+- LinkedIn optimization.
+- Multiple resume versions.
+- Interview preparation.
+- Advanced skills recommendations.
+- Priority AI processing.
+- PDF and DOCX exports.
+
+SUBSCRIPTION BILLING:
+
+Set ₹99 as the configurable subscription price.
+
+Make the billing interval configurable.
+
+Do not assume monthly, yearly or lifetime billing until the administrator selects it.
+
+Show the billing frequency clearly before payment.
+
+Do not charge users without explicit confirmation.
+
+FREE USAGE RULES:
+
+1. One total free resume per account.
+2. Unlimited editing of that resume.
+3. Editing must not consume another entitlement.
+4. Creating another resume requires Premium.
+5. Deleting the first resume does not restore entitlement.
+6. Logout/login must not reset usage.
+7. Refreshing must not reset usage.
+8. Enforce all restrictions on the server.
+9. Subscription expiry must not delete user resumes.
+10. Premium status must be verified through backend records.
+
+UPGRADE MODAL:
+
+Title:
+"Ready to create more resumes?"
+
+Description:
+"Unlock unlimited resumes, premium templates, advanced AI and job matching for ₹99."
+
+Buttons:
+- Upgrade to Premium.
+- Continue with Free Plan.
+
+Allow users to access and download their existing resume even if their subscription expires.
+
+Provide clear subscription management and cancellation options.
+
+---
+
+# 20. PAYMENT GATEWAY
+
+Integrate Razorpay.
+
+Website:
+https://razorpay.com/
+
+Support available payment methods:
+
+- UPI.
+- Debit card.
+- Credit card.
+- Net banking.
+
+Implement:
+
+- Secure payment order creation.
+- Server-side signature verification.
+- Signed webhook verification.
+- Successful payment handling.
+- Failed payment handling.
+- Refund status handling.
+- Subscription activation.
+- Expiry handling.
+- Renewal management.
+- Cancellation management.
+- Payment history.
+- Invoice or receipt access.
+
+Never trust frontend payment success.
+
+Never store card details.
+
+Do not unlock Premium until payment verification succeeds.
+
+If recurring subscriptions are configured, use the appropriate Razorpay subscription integration and clearly disclose renewal terms.
+
+---
+
+# 21. SUPABASE DATABASE ARCHITECTURE
+
+Create database migrations for:
+
+1. profiles
+2. resumes
+3. resume_sections
+4. resume_versions
+5. resume_templates
+6. ats_analyses
+7. job_descriptions
+8. job_matches
+9. cover_letters
+10. job_applications
+11. user_preferences
+12. ai_usage_logs
+13. plans
+14. subscriptions
+15. payments
+16. user_usage
+17. subscription_events
+18. support_tickets
+19. coupons
+20. notifications
+21. audit_logs
+
+Use:
+
+- UUID primary keys.
+- Foreign keys.
+- Timestamps.
+- Appropriate indexes.
+- Data validation.
+- Ownership constraints.
+
+Implement Row Level Security on every exposed user-data table.
+
+Ensure:
+
+- Users can only read their own records.
+- Users can only modify their own records.
+- Unauthorized users cannot access private files.
+- Admin privileges are checked server-side.
+- Service-role credentials are never exposed to browsers.
+
+Use private storage buckets for uploaded resumes.
+
+---
+
+# 22. ADMIN DASHBOARD
+
+Create a secure admin dashboard.
+
+Include:
+
+- Total users.
+- Active users.
+- New registrations.
+- Resume creation statistics.
+- Free vs Premium users.
+- Subscription statistics.
+- Payment statistics.
+- AI usage.
+- Storage usage.
+- Failed API requests.
+- Template usage.
+- Support requests.
+
+Admin controls:
+
+- Manage users.
+- Manage templates.
+- Configure AI limits.
+- Configure pricing.
+- Configure billing interval.
+- Enable/disable premium features.
+- Manage coupons.
+- View subscriptions.
+- View payment events.
+- Manage platform announcements.
+
+Implement proper role-based authorization.
+
+Never rely only on frontend route protection.
+
+---
+
+# 23. PRIVACY AND CUSTOMER SUPPORT
+
+Implement:
+
+- Privacy policy.
+- Terms and conditions.
+- Refund policy.
+- Cookie policy where applicable.
+- Contact page.
+- FAQ.
+- Support ticket system.
+- Account deletion.
+- Personal data export.
+- Resume deletion.
+- Session management.
+
+Users must be able to delete their accounts and associated personal information according to applicable retention requirements.
+
+Resumes must be private by default.
+
+Shared resume links must be optional, revocable and protected against accidental exposure.
+
+---
+
+# 24. SECURITY AND PERFORMANCE
+
+Implement:
+
+- Server-side authorization.
+- Input validation.
+- Secure authentication.
+- Supabase RLS.
+- File upload validation.
+- File size restrictions.
+- MIME type validation.
+- AI API rate limits.
+- OTP abuse prevention.
+- CAPTCHA where appropriate.
+- Payment signature verification.
+- Secure error handling.
+- Audit logging.
+- Request validation.
+- Protection against duplicate payments.
+- Database transaction safety.
+- Autosave failure recovery.
+
+Optimize:
+
+- Page loading.
+- Image loading.
+- Database queries.
+- Resume rendering.
+- AI requests.
+- Mobile performance.
+
+Never expose API keys, database secrets or service-role keys.
+
+---
+
+# 25. ANALYTICS AND BUSINESS INTELLIGENCE
+
+Implement privacy-conscious product analytics.
+
+Track:
+
+- Registrations.
+- Resume creation.
+- Resume downloads.
+- Template selections.
+- AI feature usage.
+- ATS checks.
+- Premium conversion.
+- Subscription cancellations.
+- Payment failures.
+
+Use this information to understand which features customers actually use.
+
+Do not expose personally identifiable resume information in analytics dashboards.
+
+---
+
+# 26. REQUIRED PROJECT STRUCTURE
+
+Use modular architecture.
+
+Separate modules for:
+
+- Authentication.
+- Onboarding.
+- Landing page.
+- Dashboard.
+- Resume editor.
+- Resume templates.
+- Fresher builder.
+- AI services.
+- ATS analyzer.
+- Job matcher.
+- Cover letters.
+- Job tracker.
+- Career tools.
+- Subscription management.
+- Payments.
+- User settings.
+- Admin dashboard.
+- Database utilities.
+- API routes.
+- Validation.
+- Shared components.
+
+Maintain reusable components and clean code.
+
+Create:
+
+- README.md.
+- .env.example.
+- Supabase migrations.
+- Setup instructions.
+- Deployment instructions.
+- Testing instructions.
+
+---
+
+# 27. TESTING AND QUALITY ASSURANCE
+
+Test the complete application.
+
+AUTHENTICATION:
+- Google login.
+- Email signup.
+- Email verification.
+- Phone OTP.
+- Password reset.
+- Session persistence.
+- Logout.
+
+RESUME:
+- Create.
+- Edit.
+- Autosave.
+- Duplicate.
+- Delete.
+- Reopen.
+- Download PDF.
+- Download DOCX.
+- Restore versions.
+
+FRESHER BUILDER:
+- Guided onboarding.
+- Optional sections.
+- Project descriptions.
+- Education details.
+- Fresher ATS analysis.
+
+AI:
+- Generation.
+- Regeneration.
+- Invalid responses.
+- API failure.
+- Rate limits.
+- Usage tracking.
+
+PAYMENTS:
+- Successful payment.
+- Failed payment.
+- Invalid signature.
+- Duplicate webhook.
+- Subscription activation.
+- Subscription expiry.
+- Cancellation.
+
+SECURITY:
+- User A cannot access User B's resumes.
+- User A cannot access User B's files.
+- Free users cannot bypass entitlements.
+- Unauthorized users cannot access admin features.
+
+DOCUMENTS:
+- One-page resume.
+- Two-page resume.
+- Three-page resume.
+- Long experience sections.
+- Different templates.
+- Different fonts.
+- Different page sizes.
+
+Fix all critical bugs before declaring the product complete.
+
+---
+
+# 28. DEVELOPMENT EXECUTION STRATEGY
+
+IMPORTANT: Do not attempt to generate the entire application in one enormous code-generation step.
+
+Develop it in phases.
+
+PHASE 1:
+- Project setup.
+- Design system.
+- Landing page.
+- Navigation.
+- Responsive layout.
+
+PHASE 2:
+- Supabase configuration.
+- Authentication.
+- Google OAuth.
+- Email authentication.
+- Phone OTP.
+- User profiles.
+
+PHASE 3:
+- Database migrations.
+- RLS.
+- Private file storage.
+- Backend authorization.
+
+PHASE 4:
+- Dashboard.
+- Onboarding.
+- Resume collection.
+
+PHASE 5:
+- Resume editor.
+- Live preview.
+- Autosave.
+- Template engine.
+
+PHASE 6:
+- Professional templates.
+- Fresher templates.
+- Fresher onboarding.
+
+PHASE 7:
+- PDF generation.
+- DOCX generation.
+- TXT export.
+- Rendering tests.
+
+PHASE 8:
+- AI resume writer.
+- Project description generator.
+- AI usage limits.
+
+PHASE 9:
+- ATS analyzer.
+- Job description matcher.
+- Resume tailoring.
+
+PHASE 10:
+- Cover letters.
+- LinkedIn tools.
+- Interview preparation.
+- Job tracker.
+
+PHASE 11:
+- Freemium entitlements.
+- Razorpay payments.
+- Premium subscriptions.
+- Payment webhooks.
+
+PHASE 12:
+- Admin dashboard.
+- Analytics.
+- Privacy.
+- Support.
+
+PHASE 13:
+- Full testing.
+- Bug fixes.
+- Performance optimization.
+- Deployment.
+
+AFTER EACH PHASE:
+
+1. Explain what was implemented.
+2. List the files created or modified.
+3. Explain database changes.
+4. Run relevant tests.
+5. Fix detected errors.
+6. Explain required configuration.
+7. Continue to the next phase.
+
+Do not repeatedly ask for permission to continue ordinary implementation steps.
+
+If credentials are missing, create the integration and provide setup instructions. Never pretend that an external service is connected.
+
+If an external API is unavailable, implement the correct integration structure and clearly identify what requires configuration.
+
+---
+
+# 29. IMPORTANT DEVELOPMENT RULES
+
+- Do not create a frontend-only application.
+- Do not use fake authentication.
+- Do not use mock data as a substitute for backend functionality.
+- Do not create dead buttons.
+- Do not skip database migrations.
+- Do not hardcode user information.
+- Do not fabricate AI results.
+- Do not expose secrets.
+- Do not implement insecure payment verification.
+- Do not put all application code into one file.
+- Do not use one generic template for every resume.
+- Do not lock free PDF downloads.
+- Do not remove existing resumes when subscriptions expire.
+- Do not claim features are complete when they are placeholders.
+
+All essential features must be connected and functional.
+
+---
+
+# 30. FINAL PRODUCT ACCEPTANCE CRITERIA
+
+The finished product must allow a real customer to:
+
+1. Visit the landing page.
+2. Register with Google, email or configured mobile OTP.
+3. Complete onboarding.
+4. Access their dashboard.
+5. Create their first free resume.
+6. Build a fresher resume.
+7. Upload an existing PDF or DOCX resume.
+8. Edit information.
+9. Choose professional templates.
+10. See a live preview.
+11. Use their available AI credits.
+12. Run an ATS analysis.
+13. Tailor a resume to a job description when eligible.
+14. Download a professional PDF.
+15. Download a DOCX.
+16. Save their resume.
+17. Access their account later.
+18. Upgrade to Premium for ₹99.
+19. Complete a verified Razorpay payment.
+20. Access premium functionality.
+21. Manage their subscription.
+
+The application must be secure, responsive, maintainable and deployable.
+
+FINAL PRODUCT VISION:
+
+Create a platform that combines:
+
+- Teal's career intelligence.
+- Resume.io's design quality.
+- Resume.com's accessible resume experience.
+- A dedicated fresher resume system.
+- Affordable Indian pricing.
+- A reliable AI-powered resume editor.
+
+The main competitive advantage is:
+
+"Create your first professional resume for free. Upgrade for unlimited resumes and advanced AI career tools."
+
+Build a real product that customers can trust and use every day.
+
+Do not stop after generating a design. Deliver the working application, database, authentication, integrations, tests and deployment documentation.
